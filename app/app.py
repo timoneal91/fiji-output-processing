@@ -106,9 +106,9 @@ class App:
 
     def output_data(self):
         d = path.dirname(self.source)
-        f = path.basename(self.source)
+        f = path.basename(self.source).replace('.csv', '')
 
-        output_location = path.join(d, 'processed_{}_{}.csv'.format(datetime.now().strftime('%Y%m%d-%H%M%S'), f))
+        output_location = path.join(d, '{}_processed_{}.csv'.format(f, datetime.now().strftime('%Y%m%d-%H%M%S')))
 
         with open(output_location, 'w') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
