@@ -5,9 +5,6 @@ from os import path
 
 
 class App:
-    # number of decimal places for final output
-    PRECISION = 3
-
     def __init__(self, source):
 
         if not source.endswith(".csv"):
