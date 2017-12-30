@@ -80,7 +80,7 @@ class App:
 
                 preceding_col_values = []
 
-                for r in output[row_idx - 10:row_idx]:
+                for r in output[row_idx - 10:row_idx-1]:
                     preceding_col_values.append(r[col_idx])
 
                 preceding_col_values = sorted(preceding_col_values)
